@@ -1,0 +1,19 @@
+baseURL: https://example.com/
+title: My Website
+description: This is my website
+copyright: 2019 Chris Palmeri
+theme: custom
+sectionPagesMenu: main
+
+disableKinds:
+- RSS
+
+taxonomies:
+  tag: tags
+
+pygmentsUseClasses: true
+pygmentsCodefences: true
+pygmentsOptions: linenos=table
+
+blackfriday:
+  smartypants: false

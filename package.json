@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": {
+    "serve": "hugo server -w",
+    "build": "hugo",
+    "clean": "rimraf public & rimraf resources"
+  },
+  "devDependencies": {
+    "hugo-bin": "^0.43.6"
+  }
+}

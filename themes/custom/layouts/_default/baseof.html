@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{ .Site.Language }}">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Description }}" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/milligram.css" />
+    <link rel="stylesheet" href="/css/syntax.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+  </head>
+  <body>
+      <div class="container">
+    <header>
+      <h1><a href="/">{{ .Site.Title }}</a></h1>
+    </header>
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+    <footer>
+      <nav class="sidebar-nav">
+        {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+        {{ end }}
+      </nav>
+      <p class="meta">&copy; {{ .Site.Copyright }}</p>
+    </footer>
+    </div>
+  </body>
+</html>
