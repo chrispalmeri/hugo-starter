@@ -24,6 +24,8 @@ This is an example paragraph with some **bold** text, _italic_ text,
 some **_bold italic_**, as well as ~~strikethrough~~. Also some
 `` `code` `` as well.
 
+Smartypants "quotes" 1/4 and -- that's it.
+
     function plainAlert() {
       // based on normalize, milligram, open color, and monokailight
     }

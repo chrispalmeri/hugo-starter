@@ -15,21 +15,19 @@
     <link rel="icon" type="image/png" href="/img/favicon.png">
   </head>
   <body>
-      <div class="container">
     <header>
-      <h1><a href="/">{{ .Site.Title }}</a></h1>
+      <p class="logo"><a href="/">{{ .Site.Title }}</a></p>
     </header>
+    <nav>
+      {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
     <main>
       {{ block "main" . }}{{ end }}
     </main>
     <footer>
-      <nav class="sidebar-nav">
-        {{ range .Site.Menus.main }}
-        <a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
-        {{ end }}
-      </nav>
-      <p class="meta">&copy; {{ .Site.Copyright }}</p>
+      <p>&copy; {{ .Site.Copyright }}</p>
     </footer>
-    </div>
   </body>
 </html>

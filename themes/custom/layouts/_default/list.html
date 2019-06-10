@@ -1,14 +1,14 @@
 {{ define "main" }}
 {{ range .Pages }}
-<article>
+<section>
   <header>
     <h2><a href='{{ .Permalink }}'>{{ .Title }}</a></h2>
-    <p class="meta">{{ .Date.Format "January 2, 2006" }}</p>
+    <p class="metadata">{{ .Date.Format "January 2, 2006" }}</p>
   </header>
-  <p>{{ .Summary }}</p>
+  <p class="summary">{{ .Summary }}</p>
   <footer>
     <p><a class="button" href='{{ .Permalink }}'>Read more</a></p>
   </footer>
-</article>
+</section>
 {{ end }}
 {{ end }}

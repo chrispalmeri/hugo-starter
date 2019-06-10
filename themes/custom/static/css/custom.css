@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500&display=swap');
 
+/* testing
+html * {
+  background: rgba(0,0,0,0.1);
+}
+*/
+
 ul, ol {
   margin: 0 0 2.5rem 3.0rem;
 }
@@ -11,6 +17,86 @@ samp {
   font-family: 'Roboto Mono', monospace;
 }
 
-.meta {
+.metadata {
   color: #868e96; /* 6 */
+}
+
+/*  grid  */
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: grid;
+  margin: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+  font: 16px sans-serif;
+  line-height: 1.8;
+}
+
+body > header {
+  grid-area: header;
+}
+body > nav {
+  grid-area: nav;
+}
+body > main {
+  grid-area: main;
+  padding: 5rem 8rem;
+  overflow: auto;
+  /* fix grid expanding too much */
+  min-width: 0;
+}
+body > footer {
+  grid-area: footer;
+}
+
+body > header, body > nav, body > footer {
+  text-align: center;
+  padding: 2em;
+  color: #fff;
+  background: #1971c2;
+}
+body > nav {
+  padding: 0 2em 2em 2em;
+}
+
+body > header a, body > nav a, body > footer a {
+  color: #fff;
+  text-decoration: none
+}
+body > header p, body > nav p, body > footer p {
+  margin: 0;
+}
+
+nav a {
+  display: block;
+}
+
+@media (min-width: 800px) {
+  body {
+    height: 100%;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header main"
+      "nav    main"
+      "footer main";
+  }
+}
+
+.logo {
+  font-size: 2.8rem;
+}
+.summary {
+  /* fix grid expanding too much */
+  word-wrap: break-word;
 }

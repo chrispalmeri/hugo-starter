@@ -24,6 +24,6 @@ Uses "hugo-bin" npm module rather than the Windows executable, so:
   * what color should black codeblock text be
   * consolidate color definitions
       * syntax.css is really only 5 colors, plus black, white, and mid-gray
-  * kill 90% font stepdown on sublists
   * get rid of unused css
-  * lost of other stuff
+  * bottom padding on main
+  * lots of other stuff
